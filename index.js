@@ -150,16 +150,17 @@ app.get('/REPO', (req, res) => {
 
         enigmaDoMedo:"O Enigma do Medo da Aniquilação é desconhecido. Quando ele for resolvido, a Aniquilação perderá sua resistência a dano e sua habilidade Tempestade de Espinho",
     }]
-    const ameaçasDaRealidade = [{
-
-    }]
     const rituais = [{
-
+      
+      
     }]
     const poderesParanormais = [{
-
+      
     }]
     const itensAmaldicoados = [{
+      
+    }]
+    const ameaçasDaRealidade = [{
 
     }]
 
