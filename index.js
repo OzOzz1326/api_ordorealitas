@@ -2,8 +2,10 @@ const express = require('express');
 const app = express()
 const port = 3000
 
-app.get('/REPO', (req, res) => {
-    const criatura = [{
+
+
+app.get('/criaturas', (req, res) => {
+    const criaturas = [{
         id: 1,
         name: "Aniquilação",
         elemento1: "Sangue",
@@ -54,7 +56,7 @@ app.get('/REPO', (req, res) => {
               },
             },
             ataque2:{
-              nome: "Tentáculos Espinheitos",
+              nome: "Tentáculos Espinhentos",
               acao: "Padrão",
               tipo: "Distância x3 MÉDIO",
               ataque: "4d10+10",
@@ -78,7 +80,7 @@ app.get('/REPO', (req, res) => {
             reacao1:{
               nome: "Agarrão",
               acao: "Reação",
-              descricao: "Se a Aniquilação aceta um ataque de Tentáculos Espinheitos, ela pode tentar agarrar o alvo (teste 5d20+50). Ela pode manter até 4 personagens agarrados por vez.",
+              descricao: "Se a Aniquilação aceta um ataque de Tentáculos Espinhentos, ela pode tentar agarrar o alvo (teste 5d20+50). Ela pode manter até 4 personagens agarrados por vez.",
               dado:{
                 teste: "5d20+50",
               },
@@ -86,7 +88,7 @@ app.get('/REPO', (req, res) => {
             reacao2:{
               nome: "Instinto Aniquilador",
               acao: "Reação",
-              descricao: "Sempre que um personagem em alcance curto da Aniquilação se movimenta mais do que 3m, a Aniquilação realiza um ataque de Tentáculos Espinheitos contra o personagem.",
+              descricao: "Sempre que um personagem em alcance curto da Aniquilação se movimenta mais do que 3m, a Aniquilação realiza um ataque de Tentáculos Espinhentos contra o personagem.",
             }
           },
           livre:{
@@ -150,21 +152,36 @@ app.get('/REPO', (req, res) => {
 
         enigmaDoMedo:"O Enigma do Medo da Aniquilação é desconhecido. Quando ele for resolvido, a Aniquilação perderá sua resistência a dano e sua habilidade Tempestade de Espinho",
     }]
+
+    res.send(criaturas)
+    })
+
+app.get('/rituais', (req, res) => {
     const rituais = [{
-      
-      
+
     }]
+    res.send(rituais)
+})
+      
+app.get('/poderesParanormais', (req, res) => {
     const poderesParanormais = [{
-      
+        
     }]
+    res.send(poderesParanormais)
+    })
+      
+app.get('itensAmaldicoados', (req, res) => {
     const itensAmaldicoados = [{
       
     }]
-    const ameaçasDaRealidade = [{
+    res.send(itensAmaldicoados)
+})
+
+app.get('/ameacasDaRealidade', (req, res) => {
+    const ameacasDaRealidade = [{
 
     }]
-
-  res.send('./REPO')
+    res.send(ameacasDaRealidade)
 })
 
 app.listen(port, () => {
